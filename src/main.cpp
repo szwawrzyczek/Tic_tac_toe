@@ -246,7 +246,6 @@ string Plansza::toString() const
 		return ss.str();
 	}
 
-
 int zliczaj_stan(int x, int o) 
 {
 	int wynik = 0;
@@ -269,8 +268,6 @@ int zliczaj_stan(const Plansza &plansza_gry)
 }
 
 Plansza temp_plansza;
-
-
 
 int algorytm_alfa_beta(const int poziom_rek, const bool GRACZ, const Plansza &plansza_gry, int alfa, int beta, Ruch &move) 
 {
@@ -325,11 +322,8 @@ int algorytm_alfa_beta(const int poziom_rek, const bool GRACZ, const Plansza &pl
 		return beta; 
 	}
 }
-
 Plansza plansza_gry;
-
 Ruch prevMove;
-
 int wyswietl_licz = 0;
 
 void wyswietl_plansza_gry() 
@@ -382,7 +376,7 @@ void tura_czlowieka() {
 void tura_komputera() {
 	Ruch move;
 	if ( wyswietl_licz == 2 ) {
-		move.set(3,4);
+		move.set(3,4); // ruch poczatkowy ustawiony na sztywno
 	} else {
 		algorytm_alfa_beta(Glebokosc_rek,MAXI,plansza_gry,-INF,INF,move);
 	}
@@ -419,9 +413,10 @@ int main() {
 
 int choice=0;
 cout <<" WITAJ W GRZE KÓŁKO-KRZYŻYK O ROZMIARZE PLANSZY ";
-cout << Rozmiar_planszy << "x" << Rozmiar_planszy << " POWODZENIA W GRZE!! ";
-cout <<" GRACZ KOMPUTEROWY JEST STWORZONY W OPARCIU O ALGORYTM ALFA BETA";
-cout <<" WYNIKA STĄD, ŻE WSKAZANA JEST UWAŻNA GRA :)";
+cout << Rozmiar_planszy << "x" << Rozmiar_planszy;
+cout <<" GRACZ KOMPUTEROWY JEST STWORZONY W OPARCIU O ALGORYTM ALFA BETA\n";
+cout <<" WYNIKA STĄD, ŻE WSKAZANA JEST UWAŻNA GRA :)\n";
+cout <<" POWODZENIA W GRZE!! \n\n";
 
 	cout << "OPCJE GRY"<<endl<<endl;
 	cout << "Graj przeciwko komputerowi   :  wybierz 1"<<endl;
