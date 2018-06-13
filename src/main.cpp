@@ -420,6 +420,8 @@ int main() {
 int choice=0;
 cout <<" WITAJ W GRZE KÓŁKO-KRZYŻYK O ROZMIARZE PLANSZY ";
 cout << Rozmiar_planszy << "x" << Rozmiar_planszy << " POWODZENIA W GRZE!! ";
+cout <<" GRACZ KOMPUTEROWY JEST STWORZONY W OPARCIU O ALGORYTM ALFA BETA";
+cout <<" WYNIKA STĄD, ŻE WSKAZANA JEST UWAŻNA GRA :)";
 
 	cout << "OPCJE GRY"<<endl<<endl;
 	cout << "Graj przeciwko komputerowi   :  wybierz 1"<<endl;
@@ -429,9 +431,6 @@ cout << Rozmiar_planszy << "x" << Rozmiar_planszy << " POWODZENIA W GRZE!! ";
 		cin >> choice;
 	} while ( choice != 1 && choice != 2);
 
-
-
-	//clearscreen();
 	switch(choice) {
 		case 1:
 			gra_z_komputerem();

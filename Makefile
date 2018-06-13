@@ -6,7 +6,7 @@ BUILD_PATH = build
 BIN_PATH = $(BUILD_PATH)/bin
 
 # executable # 
-BIN_NAME =TTT_prog
+BIN_NAME =Tic_tac_toe_v2
 
 # extensions #
 SRC_EXT = cpp
